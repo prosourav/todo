@@ -1,0 +1,21 @@
+.heading{
+   height: 200px;
+   background-color: rgb(43, 33, 8);
+}
+.heading h1{
+   text-align: center;
+   padding-top: 5%;
+   color: wheat;
+}
+form{
+   text-align: center;
+   margin-top: 30px;
+}
+input{
+   width: 350px;
+}
+.myTodoItems{
+   width: 430px;
+   background-color: #d0baba;
+   margin: 10px auto;
+}
