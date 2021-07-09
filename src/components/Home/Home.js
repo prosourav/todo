@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import ListItem from './ListItem/ListItem';
+
 const Home = () => {
-   const [todoList,setTodoList] = useState([]);
+   const getTodos =()=>{
+      const alltodo = localStorage.getItem('todo');
+      if(alltodo){
+         return JSON.parse(alltodo);
+      }
+      else{
+         return [];
+      }
+   }
+   const [todoList,setTodoList] = useState(getTodos);
    const [todo,setTodo] = useState('');
+
+
+   useEffect(()=>{
+      localStorage.setItem('todo',JSON.stringify(todoList));
+   },[todoList])
 
    const handleSubmit=(e)=>{
       e.preventDefault();
