@@ -13,9 +13,16 @@ form{
 }
 input{
    width: 350px;
+   height: 34px;
+}
+.submit{
+   height: 30px;
+   background-color: rgb(32, 118, 42);
+   color: white;
 }
 .myTodoItems{
-   width: 430px;
-   background-color: #d0baba;
+   width: 40%;
+   background-color: #373232;
    margin: 10px auto;
+   border: 2px solid black;
 }

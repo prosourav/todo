@@ -51,11 +51,13 @@ const Home = () => {
          </div>
          <div>
          <form onSubmit={handleSubmit}>
-         <input type="text" value={todo} onChange={handleChange} />
-         <button type="submit">Submit</button>
+         <input type="text" value={todo} placeholder='enter your todo here' onChange={handleChange} />
+         <button type="submit" className='submit mx-1'>Add</button>
          </form>
          </div>
       <div className="myTodoItems">
+      
+      { (todoList.length===0) && <h4 className='text-center text-white py-5'>You Have No Saved Todo</h4>}
          {
             todoList.map((item,index)=><ListItem item={item} deleteItem={handleDelete} editItem={handleEdit} index={index} key={index}></ListItem>)
          }
